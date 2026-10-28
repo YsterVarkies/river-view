@@ -1,0 +1,21 @@
+{
+  "name": "river-view-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "River View Guest Rooms, Potchefstroom: static site with React Bits islands and Three.js scenes.",
+  "scripts": {
+    "build:react": "esbuild src/react-bits/islands.jsx --bundle --minify --format=iife --target=es2020 --jsx=automatic --loader:.jsx=jsx --define:process.env.NODE_ENV=\\\"production\\\" --legal-comments=none --outfile=assets/react-bits/islands.js",
+    "build": "npm run build:react && npm run build:scenes",
+    "serve": "python -m http.server 5173 --bind 127.0.0.1",
+    "build:scenes": "esbuild src/scenes/index.js --bundle --minify --format=iife --target=es2019 --legal-comments=none --outfile=assets/js/scenes.js",
+    "build:reviews": "node src/build-reviews.mjs"
+  },
+  "devDependencies": {
+    "@use-gesture/react": "10.3.1",
+    "esbuild": "0.28.2",
+    "motion": "12.23.12",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.186.1"
+  }
+}

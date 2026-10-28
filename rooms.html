@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en-ZA" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Rooms, River View Guest Rooms, Potchefstroom</title>
+  <meta name="description" content="The Light, Royal, Vision and Rock rooms at River View, Potchefstroom: beds, bathrooms, kitchenettes and patios, with every photograph.">
+  <meta name="theme-color" content="#161816">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=47">
+  <link rel="stylesheet" href="assets/react-bits/islands.css?v=2">
+  <script>
+    (function (d) {
+      d.classList.remove('no-js'); d.classList.add('js');
+      try { if (sessionStorage.getItem('rv-arrive')) d.classList.add('is-arriving'); } catch (e) {}
+      setTimeout(function () { if (!window.RV) d.classList.add('ready', 'no-reveal'); }, 4500);
+    })(document.documentElement);
+  </script>
+</head>
+<body data-page="rooms">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="index.html" aria-label="River View, home">River View</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="rooms.html" aria-current="page">Rooms</a>
+      <a href="index.html#ratings">Ratings</a>
+      <a href="index.html#location">Location</a>
+      <a href="stay.html">Your stay</a>
+    </nav>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu" data-menu-toggle><span class="burger" aria-hidden="true"></span></button>
+    <a class="btn btn--sm nav__book" href="stay.html#book" data-book>Book a room</a>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav class="menu__links" aria-label="Menu">
+      <a href="index.html">Home</a>
+      <a href="rooms.html" aria-current="page">Rooms</a>
+      <a href="index.html#ratings">Ratings</a>
+      <a href="index.html#location">Location</a>
+      <a href="stay.html">Your stay</a>
+    </nav>
+    <div class="menu__foot">
+      <a class="btn" href="stay.html#book" data-book>Book a room</a>
+      <p class="small">30 Postma Street, Noordbrug, Potchefstroom</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="doors" aria-labelledby="rooms-h1" data-doors>
+      <a class="door" href="#light" data-door="light">
+        <img src="assets/img/rooms/light-1-1600.avif" srcset="assets/img/rooms/light-1-800.avif 800w, assets/img/rooms/light-1-1600.avif 1600w" sizes="(max-width: 860px) 100vw, 25vw" width="2400" height="1800" alt="The Light Room bed under sheer curtains.">
+        <span class="door__label"><strong>Light</strong><span>Double bed, bath</span></span>
+      </a>
+      <a class="door" href="#royal" data-door="royal">
+        <img src="assets/img/rooms/royal-1-853.avif" srcset="assets/img/rooms/royal-1-800.avif 800w, assets/img/rooms/royal-1-853.avif 853w" sizes="(max-width: 860px) 100vw, 25vw" width="853" height="1280" alt="The Royal Room, looking past the bed to the patio door.">
+        <span class="door__label"><strong>Royal</strong><span>Queen bed, river patio</span></span>
+      </a>
+      <a class="door" href="#vision" data-door="vision">
+        <img src="assets/img/rooms/vision-1-1023.avif" srcset="assets/img/rooms/vision-1-800.avif 800w, assets/img/rooms/vision-1-1023.avif 1023w" sizes="(max-width: 860px) 100vw, 25vw" width="1023" height="1280" alt="The Vision Room bed facing glass doors and trees.">
+        <span class="door__label"><strong>Vision</strong><span>Queen bed, river patio</span></span>
+      </a>
+      <a class="door" href="#rock" data-door="rock">
+        <img src="assets/img/rooms/rock-1-1280.avif" srcset="assets/img/rooms/rock-1-800.avif 800w, assets/img/rooms/rock-1-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 25vw" width="1280" height="853" alt="The Rock Room beds against a face-brick wall.">
+        <span class="door__label"><strong>Rock</strong><span>Sleeps three, stove and oven</span></span>
+      </a>
+      <div class="doors__top"></div>
+      <div class="doors__shade"></div>
+      <div class="doors__foot">
+        <div class="hero__row">
+          <p class="hero__lede" data-load>Four rooms off one courtyard, each with a kitchenette,<br> desk, en-suite bathroom, air conditioning and Wi-Fi.</p>
+          <a class="btn" href="stay.html#book" data-book data-load>Book a room</a>
+        </div>
+        <h1 class="hero__name" id="rooms-h1" data-fit data-load>The rooms</h1>
+      </div>
+    </section>
+
+    <section class="finder" aria-labelledby="finder-title" data-finder>
+      <div class="finder__q">
+        <h2 class="display" id="finder-title" data-reveal="lines">Find your room</h2>
+        <p data-reveal="text">Choose what matters for this trip. The rooms that fit stay lit.</p>
+        <div class="chips" role="group" aria-label="What you need" data-reveal="list">
+          <button class="chip" type="button" aria-pressed="false" data-need="three">Room for three</button>
+          <button class="chip" type="button" aria-pressed="false" data-need="bath">A bath</button>
+          <button class="chip" type="button" aria-pressed="false" data-need="stove">Stove and oven</button>
+          <button class="chip" type="button" aria-pressed="false" data-need="river">Patio facing the river</button>
+          <button class="chip" type="button" aria-pressed="false" data-need="queen">Queen bed</button>
+          <button class="chip" type="button" aria-pressed="false" data-need="dstv">DStv</button>
+        </div>
+      </div>
+      <ul class="finder__rooms" role="list" data-reveal="list">
+        <li data-has="bath"><a href="#light">Light</a><span>Sleeps 2, double bed</span></li>
+        <li data-has="river queen"><a href="#royal">Royal</a><span>Sleeps 2, queen bed</span></li>
+        <li data-has="river queen dstv"><a href="#vision">Vision</a><span>Sleeps 2, queen bed</span></li>
+        <li data-has="three stove"><a href="#rock">Rock</a><span>Sleeps 3, three beds</span></li>
+      </ul>
+      <p class="finder__result" aria-live="polite" data-finder-result>All four rooms are shown.</p>
+    </section>
+
+    <section class="room room--light" id="light" aria-labelledby="light-title">
+      <div class="room__grid">
+        <div class="room__body">
+          <h2 class="room__name display" id="light-title" data-reveal="lines">The Light Room</h2>
+          <p class="room__intro" data-reveal="text">Soft sage walls, sheer curtains and a deep double bed, with a bath rather than a shower.</p>
+          <dl class="spec" data-reveal="list">
+            <div><dt>Sleeps</dt><dd>2</dd></div>
+            <div><dt>Bed</dt><dd>Double</dd></div>
+            <div><dt>Bathroom</dt><dd>Bath, toilet and basin</dd></div>
+            <div><dt>Outside</dt><dd>Patio, private entrance</dd></div>
+          </dl>
+          <div class="amen-wrap" data-reveal="text">
+            <h3 class="amen-h">In the room</h3>
+            <ul class="amen" role="list">
+              <li>Microwave and bar fridge</li>
+              <li>Tea and coffee</li>
+              <li>Crockery and cutlery</li>
+              <li>Table for two</li>
+              <li>Smart TV, free Wi-Fi</li>
+              <li>Air conditioning</li>
+              <li>Hairdryer and iron</li>
+              <li>Toiletries</li>
+            </ul>
+          </div>
+          <div class="room__actions" data-reveal="text">
+            <a class="btn" href="stay.html#book" data-book>Book a room</a>
+            <a class="link" href="https://www.lekkeslaap.co.za/accommodation/river-view-guest-rooms/rooms" target="_blank" rel="noopener">See it on LekkeSlaap</a>
+          </div>
+        </div>
+        <div class="room-stack" data-gallery="The Light Room">
+          <figure class="shot shot--lead" style="--ar: 4 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/light-1-1600.avif" aria-label="Open photograph of The Light Room">
+              <img src="assets/img/rooms/light-1-1600.avif" srcset="assets/img/rooms/light-1-800.avif 800w, assets/img/rooms/light-1-1600.avif 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1600" height="1200" loading="lazy" alt="The Light Room bed under sheer curtains.">
+            </button>
+          </figure>
+          <div class="vcol">
+          <figure class="shot" style="--ar: 4 / 5" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/light-window-792.avif" aria-label="Open photograph of The Light Room">
+              <img src="assets/img/rooms/light-window-792.avif" sizes="(max-width: 860px) 100vw, 26vw" width="792" height="1008" loading="lazy" alt="Sheer curtains drawn back from a window, grey drapes beside it.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/light-bed-1000.avif" aria-label="Open photograph of The Light Room">
+              <img src="assets/img/rooms/light-bed-1000.avif" sizes="(max-width: 860px) 100vw, 26vw" width="1000" height="667" loading="lazy" alt="White linen, a taupe fur throw and rolled towels on the double bed, patterned cushions behind.">
+            </button>
+          </figure>
+          </div>
+          <div class="vcol vcol--drop">
+          <figure class="shot" style="--ar: 5 / 4" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/light-print-696.avif" aria-label="Open photograph of The Light Room">
+              <img src="assets/img/rooms/light-print-696.avif" sizes="(max-width: 860px) 100vw, 26vw" width="696" height="576" loading="lazy" alt="A framed photograph of a backlit leaf on the sage wall above the bed.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 3 / 5" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/light-lamp-480.avif" aria-label="Open photograph of The Light Room">
+              <img src="assets/img/rooms/light-lamp-480.avif" sizes="(max-width: 860px) 100vw, 26vw" width="480" height="816" loading="lazy" alt="A striped lamp on a pine bedside table.">
+            </button>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="room room--royal" id="royal" aria-labelledby="royal-title">
+      <div class="room__grid">
+        <div class="room__body">
+          <h2 class="room__name display" id="royal-title" data-reveal="lines">The Royal Room</h2>
+          <p class="room__intro" data-reveal="text">A navy wall with a gilded branch, a blue velvet armchair, and a patio facing the Mooi River.</p>
+          <dl class="spec" data-reveal="list">
+            <div><dt>Sleeps</dt><dd>2</dd></div>
+            <div><dt>Bed</dt><dd>Queen</dd></div>
+            <div><dt>Bathroom</dt><dd>Shower, toilet and basin</dd></div>
+            <div><dt>Outside</dt><dd>Patio facing the river</dd></div>
+          </dl>
+          <div class="amen-wrap" data-reveal="text">
+            <h3 class="amen-h">In the room</h3>
+            <ul class="amen" role="list">
+              <li>Microwave and fridge</li>
+              <li>Tea and coffee</li>
+              <li>Desk and chair</li>
+              <li>Smart TV, free Wi-Fi</li>
+              <li>Air conditioning</li>
+              <li>Open wardrobe</li>
+              <li>Hairdryer and iron</li>
+              <li>Toiletries</li>
+            </ul>
+          </div>
+          <div class="room__actions" data-reveal="text">
+            <a class="btn" href="stay.html#book" data-book>Book a room</a>
+            <a class="link" href="https://www.lekkeslaap.co.za/accommodation/river-view-guest-rooms/rooms" target="_blank" rel="noopener">See it on LekkeSlaap</a>
+          </div>
+        </div>
+        <div class="room-stack" data-gallery="The Royal Room">
+          <figure class="shot shot--lead" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/royal-2-1280.avif" aria-label="Open photograph of The Royal Room">
+              <img src="assets/img/rooms/royal-2-1280.avif" srcset="assets/img/rooms/royal-2-800.avif 800w, assets/img/rooms/royal-2-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 50vw" width="1280" height="853" loading="lazy" alt="The Royal Room: a white bed against a navy wall with a gold branch, the kitchenette under two pendant lights, sheer curtains on the right.">
+            </button>
+          </figure>
+          <div class="vcol">
+          <figure class="shot" style="--ar: 2 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/royal-1-853.avif" aria-label="Open photograph of The Royal Room">
+              <img src="assets/img/rooms/royal-1-853.avif" srcset="assets/img/rooms/royal-1-800.avif 800w, assets/img/rooms/royal-1-853.avif 853w" sizes="(max-width: 860px) 100vw, 26vw" width="853" height="1280" loading="lazy" alt="The Royal Room, looking past the bed to the patio door.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 4 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/royal-3-1600.avif" aria-label="Open photograph of The Royal Room">
+              <img src="assets/img/rooms/royal-3-1600.avif" srcset="assets/img/rooms/royal-3-800.avif 800w, assets/img/rooms/royal-3-1600.avif 1600w" sizes="(max-width: 860px) 100vw, 26vw" width="1600" height="1200" loading="lazy" alt="A round mirror above a white basin on concrete, patterned tiles behind it.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/royal-7-1280.avif" aria-label="Open photograph of The Royal Room">
+              <img src="assets/img/rooms/royal-7-1280.avif" srcset="assets/img/rooms/royal-7-800.avif 800w, assets/img/rooms/royal-7-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 26vw" width="1280" height="853" loading="lazy" alt="The navy wall with gold leaves, a pine side table and the open wardrobe shelves, the bathroom beyond.">
+            </button>
+          </figure>
+          </div>
+          <div class="vcol vcol--drop">
+          <figure class="shot" style="--ar: 2 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/royal-5-853.avif" aria-label="Open photograph of The Royal Room">
+              <img src="assets/img/rooms/royal-5-853.avif" srcset="assets/img/rooms/royal-5-800.avif 800w, assets/img/rooms/royal-5-853.avif 853w" sizes="(max-width: 860px) 100vw, 26vw" width="853" height="1280" loading="lazy" alt="The bathroom: a vessel basin on a brick plinth, blue-and-white patterned tiles, a round mirror and an orchid, a glass shower to the left.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/royal-6-1280.avif" aria-label="Open photograph of The Royal Room">
+              <img src="assets/img/rooms/royal-6-1280.avif" srcset="assets/img/rooms/royal-6-800.avif 800w, assets/img/rooms/royal-6-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 26vw" width="1280" height="853" loading="lazy" alt="A tufted blue velvet armchair with a cream fringe, a white side table and a filament lamp beside the bed.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 4 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/royal-4-1600.avif" aria-label="Open photograph of The Royal Room">
+              <img src="assets/img/rooms/royal-4-1600.avif" srcset="assets/img/rooms/royal-4-800.avif 800w, assets/img/rooms/royal-4-1600.avif 1600w" sizes="(max-width: 860px) 100vw, 26vw" width="1600" height="1200" loading="lazy" alt="A white vessel basin on a concrete top against blue-and-white patterned tiles.">
+            </button>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="room room--vision" id="vision" aria-labelledby="vision-title">
+      <div class="room__grid">
+        <div class="room__body">
+          <h2 class="room__name display" id="vision-title" data-reveal="lines">The Vision Room</h2>
+          <p class="room__intro" data-reveal="text">A four-panel landscape over a queen bed, and glass doors to a patio of its own.</p>
+          <dl class="spec" data-reveal="list">
+            <div><dt>Sleeps</dt><dd>2</dd></div>
+            <div><dt>Bed</dt><dd>Queen</dd></div>
+            <div><dt>Bathroom</dt><dd>Shower, toilet and basin</dd></div>
+            <div><dt>Outside</dt><dd>Patio over the river</dd></div>
+          </dl>
+          <div class="amen-wrap" data-reveal="text">
+            <h3 class="amen-h">In the room</h3>
+            <ul class="amen" role="list">
+              <li>Microwave and small fridge</li>
+              <li>Tea and coffee</li>
+              <li>Crockery and cutlery</li>
+              <li>Work desk</li>
+              <li>Smart TV with DStv</li>
+              <li>Air conditioning</li>
+              <li>Hairdryer and iron</li>
+              <li>Toiletries</li>
+            </ul>
+          </div>
+          <div class="room__actions" data-reveal="text">
+            <a class="btn" href="stay.html#book" data-book>Book a room</a>
+            <a class="link" href="https://www.lekkeslaap.co.za/accommodation/river-view-guest-rooms/rooms" target="_blank" rel="noopener">See it on LekkeSlaap</a>
+          </div>
+        </div>
+        <div class="room-stack" data-gallery="The Vision Room">
+          <div class="vcol">
+          <figure class="shot" style="--ar: 4 / 5" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/vision-1-1023.avif" aria-label="Open photograph of The Vision Room">
+              <img src="assets/img/rooms/vision-1-1023.avif" srcset="assets/img/rooms/vision-1-800.avif 800w, assets/img/rooms/vision-1-1023.avif 1023w" sizes="(max-width: 860px) 100vw, 26vw" width="1023" height="1280" loading="lazy" alt="The Vision Room bed facing glass doors and trees.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 1 / 1" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/vision-6-1280.avif" aria-label="Open photograph of The Vision Room">
+              <img src="assets/img/rooms/vision-6-1280.avif" srcset="assets/img/rooms/vision-6-800.avif 800w, assets/img/rooms/vision-6-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 26vw" width="1280" height="853" loading="lazy" alt="A face-brick kitchenette nook with pine shelves beside three framed leaf prints, the bathroom through the doorway.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 4 / 5" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/vision-3-1024.avif" aria-label="Open photograph of The Vision Room">
+              <img src="assets/img/rooms/vision-3-1024.avif" srcset="assets/img/rooms/vision-3-800.avif 800w, assets/img/rooms/vision-3-1024.avif 1024w" sizes="(max-width: 860px) 100vw, 26vw" width="1024" height="1280" loading="lazy" alt="A round timber mirror over a vessel basin on a brick plinth, a mosaic-tiled shower behind glass.">
+            </button>
+          </figure>
+          </div>
+          <div class="vcol vcol--drop">
+          <figure class="shot" style="--ar: 4 / 5" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/vision-5-1024.avif" aria-label="Open photograph of The Vision Room">
+              <img src="assets/img/rooms/vision-5-1024.avif" srcset="assets/img/rooms/vision-5-800.avif 800w, assets/img/rooms/vision-5-1024.avif 1024w" sizes="(max-width: 860px) 100vw, 26vw" width="1024" height="1280" loading="lazy" alt="The brick patio with two chairs before the green wall and sliding door of the room, white agapanthus along the wall.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 2 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/vision-4-853.avif" aria-label="Open photograph of The Vision Room">
+              <img src="assets/img/rooms/vision-4-853.avif" srcset="assets/img/rooms/vision-4-800.avif 800w, assets/img/rooms/vision-4-853.avif 853w" sizes="(max-width: 860px) 100vw, 26vw" width="853" height="1280" loading="lazy" alt="Pine shelves on face brick with bowls, glasses, mugs, a kettle, a microwave and a small sink.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/vision-2-1280.avif" aria-label="Open photograph of The Vision Room">
+              <img src="assets/img/rooms/vision-2-1280.avif" srcset="assets/img/rooms/vision-2-800.avif 800w, assets/img/rooms/vision-2-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 26vw" width="1280" height="853" loading="lazy" alt="The bathroom: toilet, basin on a brick plinth under a round mirror, and the mosaic shower.">
+            </button>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="room room--rock" id="rock" aria-labelledby="rock-title">
+      <div class="room__grid">
+        <div class="room__body">
+          <h2 class="room__name display" id="rock-title" data-reveal="lines">The Rock Room</h2>
+          <p class="room__intro" data-reveal="text">Named for its face-brick wall, with the biggest kitchen of the four and beds for three.</p>
+          <dl class="spec" data-reveal="list">
+            <div><dt>Sleeps</dt><dd>3</dd></div>
+            <div><dt>Beds</dt><dd>King or twin, plus a three-quarter</dd></div>
+            <div><dt>Bathroom</dt><dd>Shower, toilet and basin</dd></div>
+            <div><dt>Outside</dt><dd>Patio, private entrance</dd></div>
+          </dl>
+          <div class="amen-wrap" data-reveal="text">
+            <h3 class="amen-h">In the room</h3>
+            <ul class="amen" role="list">
+              <li>Stove and oven</li>
+              <li>Fridge and microwave</li>
+              <li>Tea and coffee</li>
+              <li>Dining table</li>
+              <li>Smart TV, free Wi-Fi</li>
+              <li>Air conditioning and a fan</li>
+              <li>Built-in wardrobes</li>
+              <li>Hairdryer and iron</li>
+            </ul>
+          </div>
+          <div class="room__actions" data-reveal="text">
+            <a class="btn btn--ink" href="stay.html#book" data-book>Book a room</a>
+            <p class="small">Rates on LekkeSlaap are quoted for two guests.</p>
+          </div>
+        </div>
+        <div class="room-stack" data-gallery="The Rock Room">
+          <figure class="shot shot--lead" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/rock-1-1280.avif" aria-label="Open photograph of The Rock Room">
+              <img src="assets/img/rooms/rock-1-1280.avif" srcset="assets/img/rooms/rock-1-800.avif 800w, assets/img/rooms/rock-1-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 50vw" width="1280" height="853" loading="lazy" alt="The Rock Room beds against a face-brick wall.">
+            </button>
+          </figure>
+          <div class="vcol">
+          <figure class="shot" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/rock-2-1280.avif" aria-label="Open photograph of The Rock Room">
+              <img src="assets/img/rooms/rock-2-1280.avif" srcset="assets/img/rooms/rock-2-800.avif 800w, assets/img/rooms/rock-2-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 26vw" width="1280" height="853" loading="lazy" alt="The kitchen with a stove and oven, microwave and patterned tiles, beside the dining table and brick wall.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 4 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/rock-4-1600.avif" aria-label="Open photograph of The Rock Room">
+              <img src="assets/img/rooms/rock-4-1600.avif" srcset="assets/img/rooms/rock-4-800.avif 800w, assets/img/rooms/rock-4-1600.avif 1600w" sizes="(max-width: 860px) 100vw, 26vw" width="1600" height="1200" loading="lazy" alt="A vessel basin on concrete with grey patterned tiles, a towel ring and a small folding table with a plant.">
+            </button>
+          </figure>
+          </div>
+          <div class="vcol vcol--drop">
+          <figure class="shot" style="--ar: 3 / 2" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/rock-3-1280.avif" aria-label="Open photograph of The Rock Room">
+              <img src="assets/img/rooms/rock-3-1280.avif" srcset="assets/img/rooms/rock-3-800.avif 800w, assets/img/rooms/rock-3-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 26vw" width="1280" height="853" loading="lazy" alt="A pine table with a lamp on polished concrete, the fridge and kitchen behind, a plank door on the left.">
+            </button>
+          </figure>
+          <figure class="shot" style="--ar: 4 / 3" data-reveal="pic">
+            <button type="button" data-full="assets/img/rooms/rock-5-1600.avif" aria-label="Open photograph of The Rock Room">
+              <img src="assets/img/rooms/rock-5-1600.avif" srcset="assets/img/rooms/rock-5-800.avif 800w, assets/img/rooms/rock-5-1600.avif 1600w" sizes="(max-width: 860px) 100vw, 26vw" width="1600" height="1200" loading="lazy" alt="A walk-in shower in grey geometric tiles, carved timber hooks on the wall beside it.">
+            </button>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dome" aria-labelledby="dome-title">
+      <div class="dome__head">
+        <h2 class="display" id="dome-title" data-reveal="lines">Every photograph</h2>
+        <p data-reveal="text">All nineteen photographs of the four rooms on one dome. Drag to turn it, and click a photograph to open it.</p>
+      </div>
+      <div class="dome__stage" data-rb="DomeGallery">
+        <script type="application/json">{"images":[{"src":"assets/img/rooms/light-1-800.avif","alt":"The Light Room bed"},{"src":"assets/img/rooms/royal-2-800.avif","alt":"The Royal Room, navy wall and kitchenette"},{"src":"assets/img/rooms/royal-1-800.avif","alt":"The Royal Room bed facing the patio"},{"src":"assets/img/rooms/royal-6-800.avif","alt":"Blue velvet armchair, Royal Room"},{"src":"assets/img/rooms/royal-7-800.avif","alt":"Navy wall and open wardrobe, Royal Room"},{"src":"assets/img/rooms/royal-3-800.avif","alt":"Round mirror and basin, Royal Room"},{"src":"assets/img/rooms/royal-4-800.avif","alt":"Basin on blue-and-white tiles, Royal Room"},{"src":"assets/img/rooms/royal-5-800.avif","alt":"Royal Room bathroom"},{"src":"assets/img/rooms/vision-1-800.avif","alt":"The Vision Room bed"},{"src":"assets/img/rooms/vision-5-800.avif","alt":"The Vision Room patio"},{"src":"assets/img/rooms/vision-6-800.avif","alt":"Vision Room kitchenette and leaf prints"},{"src":"assets/img/rooms/vision-4-800.avif","alt":"Vision Room kitchenette shelves"},{"src":"assets/img/rooms/vision-3-800.avif","alt":"Vision Room shower and timber mirror"},{"src":"assets/img/rooms/vision-2-800.avif","alt":"Vision Room bathroom"},{"src":"assets/img/rooms/rock-1-800.avif","alt":"The Rock Room beds and brick wall"},{"src":"assets/img/rooms/rock-2-800.avif","alt":"Rock Room kitchen"},{"src":"assets/img/rooms/rock-3-800.avif","alt":"Rock Room table"},{"src":"assets/img/rooms/rock-4-800.avif","alt":"Rock Room basin"},{"src":"assets/img/rooms/rock-5-800.avif","alt":"Rock Room shower"}],"grayscale":false,"overlayBlurColor":"#161816","imageBorderRadius":"0px","openedImageBorderRadius":"0px","openedImageWidth":"min(86vw, 680px)","openedImageHeight":"min(62vh, 510px)","fit":0.55,"minRadius":520}</script>
+        <ul class="dome__fallback" role="list">
+          <li><img src="assets/img/rooms/light-1-800.avif" width="800" height="600" loading="lazy" alt="The Light Room bed"></li>
+          <li><img src="assets/img/rooms/royal-2-800.avif" width="800" height="600" loading="lazy" alt="The Royal Room, navy wall and kitchenette"></li>
+          <li><img src="assets/img/rooms/royal-1-800.avif" width="800" height="600" loading="lazy" alt="The Royal Room bed facing the patio"></li>
+          <li><img src="assets/img/rooms/royal-6-800.avif" width="800" height="600" loading="lazy" alt="Blue velvet armchair, Royal Room"></li>
+          <li><img src="assets/img/rooms/royal-7-800.avif" width="800" height="600" loading="lazy" alt="Navy wall and open wardrobe, Royal Room"></li>
+          <li><img src="assets/img/rooms/royal-3-800.avif" width="800" height="600" loading="lazy" alt="Round mirror and basin, Royal Room"></li>
+          <li><img src="assets/img/rooms/royal-4-800.avif" width="800" height="600" loading="lazy" alt="Basin on blue-and-white tiles, Royal Room"></li>
+          <li><img src="assets/img/rooms/royal-5-800.avif" width="800" height="600" loading="lazy" alt="Royal Room bathroom"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta cta--gate" aria-labelledby="cta-title">
+      <div class="cta__media"><img src="assets/img/gate-30-1340.avif" width="1340" height="754" loading="lazy" data-parallax alt="The face-brick pillar with the number 30 and a lit lantern, the courtyard and room 4 behind the open gate."></div>
+      <div class="cta__shade"></div>
+      <div class="cta__text">
+        <h2 class="display" id="cta-title" data-reveal="lines">Four rooms, one gate</h2>
+        <p data-reveal="text">Rates start at R1&nbsp;125 a night for two on LekkeSlaap, and Booking.com works too. <span class="cta__live" data-checkin>&nbsp;</span></p>
+        <a class="btn btn--lg" href="stay.html#book" data-book data-reveal="text">Book a room</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__pic"><img src="assets/img/plant-leaves-1100.avif" width="1100" height="1375" loading="lazy" data-parallax alt="Close view of the striped leaves of the snake plant against the curtain and face brick."></div>
+    <div class="footer__body">
+      <a class="footer__brand" href="index.html">River View</a>
+      <nav class="footer__menu" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="index.html#ratings">Ratings</a>
+        <a href="index.html#location">Location</a>
+        <a href="stay.html">Your stay</a>
+        <a class="is-out" href="https://www.lekkeslaap.co.za/accommodation/river-view-guest-rooms" target="_blank" rel="noopener">LekkeSlaap</a>
+        <a class="is-out" href="https://www.booking.com/Share-l7eYV4" target="_blank" rel="noopener">Booking.com</a>
+      </nav>
+      <div class="footer__blocks">
+        <div>
+          <h2>Find us</h2>
+          <p>30 Postma Street<br>Noordbrug, Potchefstroom<br>North West, 2531</p>
+          <a class="btn btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=-26.678618%2C27.098373" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+        <div>
+          <h2>Times</h2>
+          <p>Check-in 14:00 to 22:00<br>Check-out 10:00<br>Self-catering, all ages welcome</p>
+        </div>
+      </div>
+      <p class="footer__legal"><span>&copy; 2026 River View Guest Rooms</span></p>
+    </div>
+  </footer>
+
+  <dialog class="book" id="book" aria-labelledby="book-title" data-book-dialog>
+    <div class="book__inner">
+      <h2 id="book-title">Book a room</h2>
+      <p>River View takes bookings through two sites. Choose the one you use; each opens in a new tab.</p>
+      <a class="book__opt" href="https://www.lekkeslaap.co.za/accommodation/river-view-guest-rooms" target="_blank" rel="noopener">
+        <span class="book__name">LekkeSlaap</span>
+        <span class="book__desc">From R1&nbsp;125 a night for two. Rated 4.8 out of 5 by 121 guests.</span>
+      </a>
+      <a class="book__opt" href="https://www.booking.com/Share-l7eYV4" target="_blank" rel="noopener">
+        <span class="book__name">Booking.com</span>
+        <span class="book__desc">Book with your Booking.com account, on its own rates and terms.</span>
+      </a>
+      <button class="book__close" type="button" data-book-close>Close</button>
+    </div>
+  </dialog>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photographs" data-lightbox hidden>
+    <div class="lightbox__stage" data-lb-stage></div>
+    <div class="lightbox__bar">
+      <p class="lightbox__cap"><span class="lightbox__count" data-lb-count></span><span data-lb-cap></span></p>
+      <div class="lightbox__btns">
+        <button type="button" data-lb-prev aria-label="Previous photograph">Previous</button>
+        <button type="button" data-lb-next aria-label="Next photograph">Next</button>
+        <button type="button" data-lb-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="curtain" aria-hidden="true" data-curtain><span class="curtain__bar"></span><span class="curtain__name">River View</span></div>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/SplitText.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/js/main.js?v=31" defer></script>
+  <script src="assets/js/rooms.js?v=43" defer></script>
+  <script src="assets/react-bits/islands.js?v=2" defer></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-28T18:35:15.657Z",
+        "reason": "Claude, verified: sections pad with var(--margin) (20-32px); the static scan cannot resolve CSS custom properties. Real-browser detect on localhost and the taste-skill inspector report no cramped padding or edge text."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "rooms.html"
+        ],
+        "createdAt": "2026-10-28T18:35:15.848Z",
+        "reason": "Claude, verified: sections pad with var(--margin) (20-32px); the static scan cannot resolve CSS custom properties. Real-browser detect on localhost and the taste-skill inspector report no cramped padding or edge text."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "stay.html"
+        ],
+        "createdAt": "2026-10-28T18:35:16.077Z",
+        "reason": "Claude, verified: sections pad with var(--margin) (20-32px); the static scan cannot resolve CSS custom properties. Real-browser detect on localhost and the taste-skill inspector report no cramped padding or edge text."
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "rooms.html"
+        ],
+        "createdAt": "2026-10-28T18:35:16.279Z",
+        "reason": "Claude, verified: type steps are var(--step-*) clamps the static scan reads as 16px; rendered sizes are 15/19/32/109/342px (taste-skill inspector, Chrome)."
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-28T18:35:16.486Z",
+        "reason": "Claude: the three showcase photos start at opacity 0 and are shown in turn by the room crossfade and on card hover; not buried."
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-28T21:41:48.082Z",
+        "reason": "user confirmed: asked for guest reviews auto-scrolling right to left across the page; it has a Pause scrolling button, pauses on hover and off-screen, and is a swipeable row under reduced motion"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "rooms.html"
+        ],
+        "createdAt": "2026-10-28T21:41:48.188Z",
+        "reason": "user confirmed: asked for guest reviews auto-scrolling right to left across the page; it has a Pause scrolling button, pauses on hover and off-screen, and is a swipeable row under reduced motion"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "stay.html"
+        ],
+        "createdAt": "2026-10-28T21:41:48.300Z",
+        "reason": "user confirmed: asked for guest reviews auto-scrolling right to left across the page; it has a Pause scrolling button, pauses on hover and off-screen, and is a swipeable row under reduced motion"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-28T21:41:48.413Z",
+        "reason": "Claude: the uppercase text is short Barlow Condensed display type (menu links, headings, a map-loop fallback line), the site's chosen display style, not running body copy"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-28T21:41:48.536Z",
+        "reason": "Claude, verified: type steps are var(--step-*) clamps the static scan reads as 16px; rendered sizes are 15/19/32/109/342px (taste-skill inspector, Chrome)"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "stay.html"
+        ],
+        "createdAt": "2026-10-28T21:41:48.646Z",
+        "reason": "Claude: the uppercase text is short Barlow Condensed display type (menu links, headings, a map-loop fallback line), the site's chosen display style, not running body copy"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "stay.html"
+        ],
+        "createdAt": "2026-10-28T21:41:48.767Z",
+        "reason": "Claude, verified: type steps are var(--step-*) clamps the static scan reads as 16px; rendered sizes are 15/19/32/109/342px (taste-skill inspector, Chrome)"
+      }
+    ]
+  }
+}

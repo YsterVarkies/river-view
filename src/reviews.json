@@ -1,0 +1,25 @@
+{
+  "_note": "Real guest reviews, copied from the public LekkeSlaap and Booking.com listings on 2026-10-28. Text is the guest's own, shortened to whole sentences where a review was long; nothing is invented. 'translated' means the guest wrote in Afrikaans and the platform shows an English translation. Run `npm run build:reviews` after editing.",
+  "summary": {
+    "lekkeslaap": { "score": "4.8", "outOf": "5", "count": 121, "url": "https://www.lekkeslaap.co.za/accommodation/river-view-guest-rooms/reviews",
+      "categories": [["Cleanliness", "5.0"], ["Value for money", "4.9"], ["Location", "4.8"], ["Service", "4.8"], ["Safety", "4.7"]] },
+    "booking": { "score": "9.3", "outOf": "10", "count": 369, "url": "https://www.booking.com/Share-l7eYV4",
+      "categories": [["Cleanliness", "9.8"], ["Free Wi-Fi", "9.8"], ["Location", "9.7"], ["Comfort", "9.7"], ["Value for money", "9.6"], ["Facilities", "9.6"], ["Staff", "9.5"]] }
+  },
+  "reviews": [
+    { "site": "LekkeSlaap", "score": "5.0", "name": "Donovan B", "detail": "Family with young children, Sep 2026, The Rock Room", "text": "Great accommodation for a couple and a child. Would definitely stay there again." },
+    { "site": "Booking.com", "name": "Pamela", "detail": "South Africa", "text": "Perfect overnight accommodation in an excellent location, so close to town and very convenient. The property felt safe and secure, which gave us peace of mind." },
+    { "site": "LekkeSlaap", "score": "5.0", "name": "Surette M", "detail": "Travelling alone, Jul 2026, The Light Room", "text": "As before. Very clean and neat. Close to university and not too busy area. Will definitely stay there again.", "translated": true },
+    { "site": "Booking.com", "name": "Jessica", "detail": "Bermuda", "text": "The place is super cute and in a nice area right by the NWU stadium and university. Marli and her mother in law (I think) were super sweet and welcoming." },
+    { "site": "LekkeSlaap", "score": "5.0", "name": "Christa C", "detail": "With partner, Mar 2026, The Vision Room", "text": "Beautiful room with all the amenities and privacy. We really appreciated the patio and beautiful view.", "translated": true },
+    { "site": "Booking.com", "name": "Hanson", "detail": "South Africa", "text": "Very conveniently located close to NWU, in a beautiful suburb. Modern facility, neat and clean." },
+    { "site": "LekkeSlaap", "score": "5.0", "name": "Rina P", "detail": "Family with teenagers, Mar 2026, The Rock Room", "text": "Beautiful stay! Will definitely go back again! Marli is an excellent hostess. Fresh clean linen. Great stay!", "translated": true },
+    { "site": "Booking.com", "name": "Christine", "detail": "South Africa", "text": "So lovely, had everything we needed and more. Loved the small touches like salt and pepper and oil." },
+    { "site": "LekkeSlaap", "score": "5.0", "name": "Elmarie V", "detail": "With partner, Aug 2026", "text": "We had a wonderful stay and I would definitely book here again.", "translated": true },
+    { "site": "Booking.com", "name": "Annemie", "detail": "South Africa", "text": "Everything we needed. Softest linen! Lovely quiet area." },
+    { "site": "LekkeSlaap", "score": "5.0", "name": "Luandi R", "detail": "With partner, Jul 2026, The Rock Room", "text": "Comfortable, warm and homely.", "translated": true },
+    { "site": "Booking.com", "name": "Katlego", "detail": "South Africa", "text": "The location is very nice and quiet, and the rooms are beautiful." },
+    { "site": "LekkeSlaap", "score": "5.0", "name": "Leonie B", "detail": "Family with teenagers, Jun 2026, The Rock Room", "text": "Very nice stay. Beautiful place.", "translated": true },
+    { "site": "LekkeSlaap", "score": "4.8", "name": "Suzette B", "detail": "Aug 2026", "text": "Very nice stay. Unit clean and neat. Everything works 100%. Accommodation is close to a restaurant." }
+  ]
+}
