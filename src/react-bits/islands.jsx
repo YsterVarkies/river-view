@@ -4,12 +4,10 @@
 // fallback for visitors without script (and, for the WebGL gallery, for pages opened straight from disk).
 // Build: npm run build:react
 import { createRoot } from 'react-dom/client';
-import { useEffect, useRef } from 'react';
 import CurvedLoop from './components/CurvedLoop/CurvedLoop.jsx';
 import CircularGallery from './components/CircularGallery/CircularGallery.jsx';
 import DomeGallery from './components/DomeGallery/DomeGallery.jsx';
 import CountUp from './components/CountUp/CountUp.jsx';
-import ClickSpark from './components/ClickSpark/ClickSpark.jsx';
 
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fromDisk = window.location.protocol === 'file:';
@@ -57,37 +55,6 @@ const io = 'IntersectionObserver' in window
   : null;
 
 document.querySelectorAll('[data-rb]').forEach(el => (io ? io.observe(el) : mount(el)));
-
-// Lantern-coloured sparks wherever a visitor clicks or taps.
-function Sparks() {
-  const ref = useRef(null);
-  useEffect(() => {
-    const down = event => {
-      if (event.pointerType === 'mouse' && event.button !== 0) return;
-      ref.current?.spark(event.clientX, event.clientY);
-    };
-    document.addEventListener('pointerdown', down, { passive: true });
-    return () => document.removeEventListener('pointerdown', down);
-  }, []);
-  return (
-    <ClickSpark
-      ref={ref}
-      sparkColor="#eea23c"
-      sparkSize={11}
-      sparkRadius={24}
-      sparkCount={9}
-      duration={460}
-      style={{ position: 'fixed', inset: 0, width: '100vw', height: '100vh', pointerEvents: 'none', zIndex: 170 }}
-    />
-  );
-}
-if (!reduce) {
-  const host = document.createElement('div');
-  host.className = 'rb-sparks';
-  host.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(host);
-  createRoot(host).render(<Sparks />);
-}
 
 // The dome locks the page while a photograph is open; smooth scrolling has to pause with it.
 let domeLocked = false;

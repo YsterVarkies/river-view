@@ -740,7 +740,6 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 /* ---------- React Bits islands ---------- */
-.rb-sparks { position: fixed; inset: 0; pointer-events: none; z-index: 170; }
 
 /* Every corner: the curved gallery on the home page */
 .walk { background: var(--bg); color: var(--ink); padding: calc(var(--section) * 0.55) 0 calc(var(--section) * 0.6); }
