@@ -123,11 +123,12 @@
     }
   }
 
-  /* ---------- Guest ratings run across the page, right to left ---------- */
+  /* ---------- Guest ratings run across the page, right to left; drag or swipe to move them yourself ---------- */
   function marquee() {
     var root = document.querySelector('[data-marquee]');
     if (!root) return;
     var track = root.querySelector('.marquee__track');
+    var run = root.querySelector('.marquee__run');
     var btn = document.querySelector('[data-marquee-toggle]');
     if (RV.reduce || !track) { if (btn) btn.hidden = true; return; }
     // A second copy, hidden from assistive tech, makes the loop seamless.
@@ -135,24 +136,69 @@
     copy.removeAttribute('aria-label');
     copy.setAttribute('aria-hidden', 'true');
     copy.setAttribute('inert', '');
-    copy.classList.add('marquee__track--copy');
     track.parentNode.appendChild(copy);
-    var size = function () {
-      var w = track.getBoundingClientRect().width;
-      root.style.setProperty('--marquee-dur', Math.max(30, Math.round(w / 55)) + 's');
-    };
+    root.classList.add('is-running');
+    root.tabIndex = 0;
+    root.setAttribute('role', 'group');
+    root.setAttribute('aria-label', 'Guest reviews. Drag or use the arrow keys to move them.');
+
+    var SPEED = 55; // px per second, toward the left
+    var x = 0, w = 0, vel = 0, dragging = false, startX = 0, lastX = 0, lastT = 0;
+    var paused = false, hovering = false, offscreen = false, raf = 0, last = 0;
+    var size = function () { w = track.getBoundingClientRect().width; };
     size();
     window.addEventListener('resize', size);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(size);
-    root.classList.add('is-running');
-    new IntersectionObserver(function (e) { root.classList.toggle('is-offscreen', !e[0].isIntersecting); }, { rootMargin: '80px' }).observe(root);
+    var wrap = function () { if (w) { x = x % w; if (x > 0) x -= w; } };
+
+    function frame(now) {
+      raf = 0;
+      var dt = Math.min(0.05, (now - last) / 1000); last = now;
+      if (!dragging) {
+        if (Math.abs(vel) > 4) { x += vel * dt; vel *= Math.pow(0.04, dt); }
+        else { vel = 0; if (!paused && !hovering) x -= SPEED * dt; }
+      }
+      wrap();
+      run.style.transform = 'translate3d(' + x.toFixed(2) + 'px,0,0)';
+      if (!offscreen && !document.hidden) raf = requestAnimationFrame(frame);
+    }
+    function kick() { if (!raf && !offscreen && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } }
+
+    root.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      dragging = true; startX = lastX = e.clientX; lastT = performance.now(); vel = 0;
+      root.classList.add('is-dragging');
+      try { root.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+    root.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var now = performance.now(), dx = e.clientX - lastX;
+      x += dx;
+      var dtm = Math.max(1, now - lastT);
+      vel = vel * 0.6 + (dx / dtm * 1000) * 0.4;
+      lastX = e.clientX; lastT = now;
+    });
+    var release = function () { if (!dragging) return; dragging = false; root.classList.remove('is-dragging'); if (performance.now() - lastT > 90) vel = 0; };
+    root.addEventListener('pointerup', release);
+    root.addEventListener('pointercancel', release);
+    root.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') hovering = true; });
+    root.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') hovering = false; });
+    root.addEventListener('wheel', function (e) { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { x -= e.deltaX; e.preventDefault(); } }, { passive: false });
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { vel = 600; e.preventDefault(); }
+      if (e.key === 'ArrowRight') { vel = -600; e.preventDefault(); }
+    });
+    new IntersectionObserver(function (e) { offscreen = !e[0].isIntersecting; root.classList.toggle('is-offscreen', offscreen); kick(); }, { rootMargin: '80px' }).observe(root);
+    document.addEventListener('visibilitychange', kick);
     if (btn) {
       btn.addEventListener('click', function () {
-        var paused = root.classList.toggle('is-paused');
+        paused = !paused;
+        root.classList.toggle('is-paused', paused);
         btn.setAttribute('aria-pressed', String(paused));
         btn.textContent = paused ? 'Play scrolling' : 'Pause scrolling';
       });
     }
+    kick();
   }
 
   RV.start(function () {
