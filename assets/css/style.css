@@ -241,7 +241,7 @@ h1, h2, h3 { text-wrap: balance; }
 .intro__in { display: inline-block; }
 .intro__title .intro__l2, .intro__ghost .intro__l2 { padding-left: 40vw; }
 .intro__text {
-  position: absolute; left: var(--margin); z-index: 2;
+  position: absolute; left: var(--margin); z-index: 4;
   top: calc(34svh + var(--step-head) * 1.8 + 40px);
   width: min(40vw, 600px);
   font-size: var(--step-lead); line-height: 1.35;
@@ -251,7 +251,7 @@ h1, h2, h3 { text-wrap: balance; }
 .intro__frame img { width: 100%; height: 100%; object-fit: cover; }
 .intro__photo--main { right: 0; top: 46svh; width: 34vw; z-index: 3; }
 .intro__photo--main .intro__frame { aspect-ratio: 2 / 3; }
-.intro__col { position: absolute; left: var(--margin); top: calc(100svh - 170px); width: min(25vw, 380px); z-index: 2; display: flex; flex-direction: column; gap: 56px; }
+.intro__col { position: absolute; left: var(--margin); top: max(calc(100svh - 170px), calc(34svh + var(--step-head) * 1.8 + 40px + 9em)); width: min(25vw, 380px); z-index: 2; display: flex; flex-direction: column; gap: 56px; }
 .intro__photo--small { position: relative; width: 100%; }
 .intro__photo--small .intro__frame { aspect-ratio: 9 / 10; }
 .intro__ghost {
